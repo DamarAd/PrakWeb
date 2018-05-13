@@ -66,8 +66,9 @@
         <div class="content">
             <p><?= $row['waktu']?></p>
             <img src="asset/laptop.jpg" alt="laptop" width="380" height="250">
-            <h3><?= $row['judul'];?></h3>
-            <p><?= $row['isi'];?></p>
+            <h3><a href="single.php?id=<?= $row['id'];?>"><?= $row['judul'];?></a></h3>
+            <p><?= excerpt($row['isi']);?></p>
+            <a href="edit.php?id=<?= $row['id'];?>">Edit</a>
         </div>
         <?php endwhile; ?>
     </div>
