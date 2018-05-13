@@ -23,6 +23,11 @@ function edit_data($judul,$konten,$id){
     return run($query);
 }
 
+function hapus_data($id){
+    $query = "DELETE FROM artikel WHERE id=$id";
+    return run($query);
+}
+
 function tambah_data($judul, $konten){
     $query = "INSERT INTO artikel (judul, isi) VALUES ('$judul','$konten')";
     return run($query);

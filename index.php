@@ -69,6 +69,7 @@
             <h3><a href="single.php?id=<?= $row['id'];?>"><?= $row['judul'];?></a></h3>
             <p><?= excerpt($row['isi']);?></p>
             <a href="edit.php?id=<?= $row['id'];?>">Edit</a>
+            <a href="delete.php?id=<?= $row['id'];?>">Hapus</a>
         </div>
         <?php endwhile; ?>
     </div>
