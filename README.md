@@ -1,1 +1,1 @@
-# PrakWeb
+# Praktikum Web
