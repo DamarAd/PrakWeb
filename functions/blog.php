@@ -47,7 +47,7 @@ function run($query){
 }
 
 function excerpt($string){
-    $string = substr($string, 0, 10);
+    $string = substr($string, 0, 20);
     return $string ."...";
 }
 
