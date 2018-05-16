@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="view/style.css">
+    <link rel="stylesheet" type="text/css" href="view/index-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Ebook Pemrogaman</title>
     <?php
@@ -16,11 +16,16 @@
 <header>
 <div class="home">
         <div class="header">
-            <div id="logo">TIT</div>
+            <div id="logo">Jurnal IT</div>
             <div id="nav-menu">
                 <a href="index.php">Beranda</a>
+<<<<<<< HEAD
                 <a href="index.php">Artikel</a>
                 <a href="index.php">Saran</a>
+=======
+                <a href="index.php#artikel">Artikel</a>
+                <a href="index.php#dukungan">Saran</a>
+>>>>>>> ed6675d02fac83682fd6e0733e2338475902dadb
                 <a href="list_uploud.php">Ebook Pemrogaman</a>
 
             <?php if($login == true):?>
@@ -80,7 +85,40 @@
             }
         }
     ?>
-    
+    <script href="bt/js/bootstrap.min.js">
+        var index = 1;
+
+        function plusIndex(n){
+            index = index + 1;
+            showImage(index);
+        }
+
+        showImage(1);
+
+        function showImage(n) {
+            var i;
+            var x = document.getElementsByClassName("latardepan");
+            if (n > x.length) { index = 1 };
+            if (n < 1) { index = x.length };
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[index - 1].style.display = "block";
+        }
+        autoSlide();
+        function autoSlide(){
+            var i;
+            var x = document.getElementsByClassName("latardepan");
+            for(i=0;i<x.length;i++){
+                x[i].style.display = "none";
+            }
+            if(index > x.length){ index = 1}
+            x[index-1].style.display = "block";
+            index++;
+            setTimeout(autoSlide,2000);
+        }
+
+    </script>
 </body>
 </html>
 

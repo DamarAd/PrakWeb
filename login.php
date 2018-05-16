@@ -42,17 +42,27 @@
 
     <form action="login.php" method="post">
         <div class="form-group">    
+<<<<<<< HEAD
+=======
+            <label for="username" class="col-3">Username</label>
+>>>>>>> ed6675d02fac83682fd6e0733e2338475902dadb
             <div class="col-3">
                 <label for="username">Username</label>
                 <input type="text" name="username" class="form-control" value="" required>
             </div>
         </div>
+<<<<<<< HEAD
         <div class="form-group">            
+=======
+        <div class="form-group">
+            <label for="password" class="col-3">Password</label>
+>>>>>>> ed6675d02fac83682fd6e0733e2338475902dadb
             <div class="col-3">
             <label for="password">Password</label>
                 <input type="password" name="password" class="form-control" value="" required>
             </div>
         </div>
+<<<<<<< HEAD
         <div class="form-group">
             <div class="col-3">
                 <div id="error" class="text-danger"><?=$error ?></div>
@@ -60,6 +70,12 @@
             </div>
         </div>
         
+=======
+        <div id="error" class="text-danger"><?=$error ?></div>
+        <div class="col-3">
+            <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+        </div>
+>>>>>>> ed6675d02fac83682fd6e0733e2338475902dadb
     </form>
 
     <?php } ?> 

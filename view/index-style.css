@@ -2,15 +2,19 @@ html{
     margin: 0;
     padding: 0;
     width: 100%;
-    color: teal;
+    /* color: teal; */
 }
+
+/* #nav-menu a{
+    color: black;
+} */
 
 .home {
     margin: auto;
     padding: 0;
     width: 100vw;
     height: 100vh;
-    background: url(asset/bgweb.jpg);
+    background: #00abff;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -19,10 +23,11 @@ html{
 
 .header{
     display: flex;
+    background-color: white;
 }
 
 #logo{
-    color: indianred;
+    color: #00abff;
     font-family: fantasy;
     font-size: 30px;
     font-size: xx-large;
@@ -86,21 +91,16 @@ html{
 
 a {
     display: flex;
-    color: teal;
     text-align: center;
     font-family: Raleway;
     padding: 14px 16px;
     text-decoration: none;
 }
 
-a:hover {
-    color: whitesmoke;    
-}
-
-h2{
+#body h2{
     font-family: Raleway;
-    color: teal;
-    /* padding: 1%; */
+    color: #00abff;
+    padding: 1%;
 }
 
 hr{
@@ -116,8 +116,6 @@ hr{
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
     -webkit-flex-from: row wrap;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
@@ -125,7 +123,6 @@ hr{
 }
 
 .content{
-    -webkit-box-flex: 1;
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 0 1 30%;
@@ -176,14 +173,13 @@ hr{
     display: flex;
     font-family: Raleway;
     color: white;
-    background-color:  teal;
+    background-color:  #00abff;
     padding-bottom: 25px;
     padding-left: 40px;  
 }
 
 .saran{
     display: grid;
-    -webkit-box-flex: 1;
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 0 1 35%;
@@ -195,7 +191,6 @@ hr{
 }
 
 .langganan{
-    -webkit-box-flex: 1;
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 0 1 35%;

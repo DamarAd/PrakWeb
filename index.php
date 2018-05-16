@@ -1,9 +1,17 @@
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="view/style.css">
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="view/index-style.css">
+    <link rel="stylesheet" href="bt/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<<<<<<< HEAD
     <title>TIT</title>
+=======
+    <title>Jurnal IT</title>
+>>>>>>> ed6675d02fac83682fd6e0733e2338475902dadb
     <?php
     require_once 'core/init.php';
 
@@ -17,9 +25,12 @@
 </head>
 
 <header>
+<body id="body">
+    <!-- header -->
+
 <div class="home">
         <div class="header">
-            <div id="logo">TIT</div>
+            <div id="logo">Jurnal IT</div>
             <div id="nav-menu">
                 <a href="#beranda">Beranda</a>
                 <a href="#artikel">Artikel</a>
@@ -67,9 +78,6 @@
     </div>
 </header>
 
-<body>
-    <!-- header -->
-
     <?php
     if(isset($_GET['cari'])){
         $cari = $_GET['cari'];
@@ -80,7 +88,9 @@
     <div id="artikel"></div>
     <h2>Artikel</h2>
     <form action="" method="get">
-        <input type="search" name="cari" placeholder="Cari Artikel..">
+    <div class="col-3">
+        <input type="search" name="cari" class="form-control" placeholder="Cari Artikel..">
+    </div>
     </form>
     <div class="main-content">
         <?php while($row = mysqli_fetch_assoc($articles)):?>
@@ -111,7 +121,7 @@
             <input class="saran-input" type="text" placeholder="Nama Anda...">
             <input class="saran-input" type="text" name="Email" placeholder="Email Anda...">
             <textarea class="saran-input" cols="30" rows="10" placeholder="Saran Anda..."></textarea>
-            <input type="Submit" value="Kirim">
+            <button type="submit" name="submit" class="btn btn-default">Kirim</button>
         </div>
         <div class="langganan">
             <h3>Dapatkan setiap pembaruan</h3>
@@ -119,7 +129,7 @@
         </div>
     </div>
 
-    <script>
+    <script href="bt/js/bootstrap.min.js">
         var index = 1;
 
         function plusIndex(n){
