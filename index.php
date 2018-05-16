@@ -70,9 +70,18 @@
 <body>
     <!-- header -->
 
+    <?php
+    if(isset($_GET['cari'])){
+        $cari = $_GET['cari'];
+        $articles = hasil_cari($cari);  
+    }
+    ?>
     <!-- artikel -->
     <div id="artikel"></div>
     <h2>Artikel</h2>
+    <form action="" method="get">
+        <input type="search" name="cari" placeholder="Cari Artikel..">
+    </form>
     <div class="main-content">
         <?php while($row = mysqli_fetch_assoc($articles)):?>
         <div class="content">
@@ -89,7 +98,6 @@
         </div>
         <?php endwhile; ?>
     </div>
-
     <?php if($login == true):?>
     <a href="add.php">Tambah Artikel</a>
     <?php endif;?>

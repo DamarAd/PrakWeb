@@ -36,7 +36,6 @@
     <input type="password" name="password" value="" required><br><br>
 
     <div id="error"><?=$error ?></div><br>
-
     <input type="submit" value="submit" name="submit">
 </form>
 
