@@ -26,14 +26,17 @@
     }
 ?>
 
-<form action="" method="post">
-    <label for="judul">Judul</label>
-    <input type="text" name="judul" value=""><br><br>
+<form action="add.php" method="post">
+    <div>
+        <div>
+        <label for="judul">Judul</label>
+            <input type="text" name="judul" value=""><br><br>
+        </div>
+        <label for="konten">Konten</label>
+        <textarea name="konten" id="" cols="40" rows="10"></textarea><br><br>
 
-    <label for="konten">Konten</label>
-    <textarea name="konten" id="" cols="40" rows="10"></textarea><br><br>
+        <div id="error"><?=$error ?></div>
 
-    <div id="error"><?=$error ?></div>
-
-    <input type="submit" value="submit" name="submit">
+        <input type="submit" value="submit" name="submit">
+    </div>
 </form>

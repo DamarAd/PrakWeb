@@ -39,15 +39,19 @@
         
     ?>
 
-<<<<<<< HEAD
+
     <form action="login.php" method="post">
         <div class="form-group">    
             <label for="username">Username</label>
-            <input type="text" name="username" class="form-control" value="" required>
+            <div class="col-3">
+                <input type="text" name="username" class="form-control" value="" required>
+            </div>
         </div>
         <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" name="password" class="form-control" value="" required>
+            <div class="col-3">
+                <input type="password" name="password" class="form-control" value="" required>
+            </div>
         </div>
         <div id="error" class="text-danger"><?=$error ?></div>
         <button type="submit" name="submit" class="btn btn-primary">Submit</button>
@@ -55,19 +59,6 @@
     </form>
 
     <?php } ?> 
-=======
-<form action="" method="post">
-    <label for="username">username</label>
-    <input type="text" name="username" value="" required><br><br>
-
-    <label for="password">password</label>
-    <input type="password" name="password" value="" required><br><br>
-
-    <div id="error"><?=$error ?></div><br>
-    <input type="submit" value="submit" name="submit">
-</form>
->>>>>>> fed5c7b70615bb8c2147a8390606e925835e85e4
-
     <script href="bt/js/bootstrap.min.js"></script>
     </body>
 </html>
