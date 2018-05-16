@@ -24,7 +24,7 @@
                 <a href="#beranda">Beranda</a>
                 <a href="#artikel">Artikel</a>
                 <a href="#dukungan">Saran</a>
-                <a href="#dukungan">Ebook Pemrogaman</a>
+                <a href="list_uploud.php">Ebook Pemrogaman</a>
 
             <?php if($login == true):?>
                 <a href="logout.php">Logout</a>
