@@ -18,6 +18,18 @@ function tampilkan_per_id($id){
     return $result;
 }
 
+function hasil_cari($cari){
+    $query = "SELECT * FROM artikel WHERE judul LIKE '%$cari%' ";
+    return result($query);
+}
+
+function result($query){
+    global $link;
+    if($result = mysqli_query($link, $query) or die('gagal menampilkan data')){
+        return $result;
+    }
+}
+
 function edit_data($judul,$konten,$id){
     $query = "UPDATE artikel SET judul='$judul', isi='$konten' WHERE id=$id";
     return run($query);
@@ -47,7 +59,7 @@ function run($query){
 }
 
 function excerpt($string){
-    $string = substr($string, 0, 10);
+    $string = substr($string, 0, 20);
     return $string ."...";
 }
 
