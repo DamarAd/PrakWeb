@@ -6,24 +6,31 @@
     <title>Tokoh IT</title>
     <?php
     require_once 'core/init.php';
+    
+    $login = false;
+    if($_SESSION['user']){
+        $login = true;
+    }    
+
     $articles = tampilkan();
     ?>
 </head>
 
 <header>
-
-</header>
-
-<body>
-    <!-- header -->
-    <div class="home">
+<div class="home">
         <div class="header">
             <div id="logo">TIT</div>
             <div id="nav-menu">
                 <a href="#beranda">Beranda</a>
                 <a href="#artikel">Artikel</a>
-                <a href="#tokoh">Tokoh</a>
-                <a href="web_pribadi.html">Tentang</a>
+                <a href="#dukungan">Saran</a>
+
+            <?php if($login == true):?>
+                <a href="logout.php">Logout</a>
+            <?php else:?>
+                <a href="login.php">Login</a>
+            <?php endif;?>
+
             </div>
         </div>
         <div class="latardepan">
@@ -57,6 +64,10 @@
         <button class="btn" onclick="plusIndex(-1)" id="btn1">&#10094;</button>
         <button class="btn" onclick="plusIndex(1)" id="btn2">&#10095;</button>
     </div>
+</header>
+
+<body>
+    <!-- header -->
 
     <!-- artikel -->
     <div id="artikel"></div>
@@ -68,60 +79,20 @@
             <img src="asset/laptop.jpg" alt="laptop" width="380" height="250">
             <h3><a href="single.php?id=<?= $row['id'];?>"><?= $row['judul'];?></a></h3>
             <p><?= excerpt($row['isi']);?></p>
+            
+            <?php if($login == true):?>
             <a href="edit.php?id=<?= $row['id'];?>">Edit</a>
             <a href="delete.php?id=<?= $row['id'];?>">Hapus</a>
+            <?php endif;?>
+        
         </div>
         <?php endwhile; ?>
     </div>
-    <a href="add.php">Tambah Artikel</a>
-    
-    <!-- tokoh -->
-    <!-- <div id="tokoh"></div>
-    <h2>Tokoh</h2>
-    <hr>
-    <div class="main-tokoh">
-        <div class="list-tokoh">
-            <div class="gambar-tokoh">
-                <i class="fa fa-user"></i>
-            </div>
-            <div class="teks-tokoh">
-                <span class="nama-tokoh">Nama Tokoh</span>
-                <br>
-                <span>jabatan</span>
-            </div>
-        </div>
-        <div class="list-tokoh">
-            <div class="gambar-tokoh">
-                <i class="fa fa-user"></i>
-            </div>
-            <div class="teks-tokoh">
-                <span class="nama-tokoh">Nama Tokoh</span>
-                <br>
-                <span>jabatan</span>
-            </div>
-        </div>
-        <div class="list-tokoh">
-            <div class="gambar-tokoh">
-                    <i class="fa fa-user"></i>
-            </div>
-            <div class="teks-tokoh">
-                <span class="nama-tokoh">Nama Tokoh</span>
-                <br>
-                <span>jabatan</span>
-            </div>
-        </div>
-        <div class="list-tokoh">
-            <div class="gambar-tokoh">
-                    <i class="fa fa-user"></i>
-            </div>
-            <div class="teks-tokoh">
-                <span class="nama-tokoh">Nama Tokoh</span>
-                <br>
-                <span>jabatan</span>
-            </div>
-        </div>
-    </div> -->
 
+    <?php if($login == true):?>
+    <a href="add.php">Tambah Artikel</a>
+    <?php endif;?>
+    
     <!-- hubungi kami -->
     <div id="dukungan"></div>
     <h2>Dukungan</h2>

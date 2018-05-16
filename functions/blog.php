@@ -29,6 +29,9 @@ function hapus_data($id){
 }
 
 function tambah_data($judul, $konten){
+    $judul = escape($judul);
+    $konten = escape($konten);
+    
     $query = "INSERT INTO artikel (judul, isi) VALUES ('$judul','$konten')";
     return run($query);
 }
@@ -46,5 +49,10 @@ function run($query){
 function excerpt($string){
     $string = substr($string, 0, 10);
     return $string ."...";
+}
+
+function escape($data){
+    global $link;
+    return mysqli_real_escape_string($link,$data);   
 }
 ?>

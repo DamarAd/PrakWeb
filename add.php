@@ -1,6 +1,10 @@
 <?php
     require_once 'core/init.php';
 
+    if(!$_SESSION['user']){
+        header('Location:index.php');
+    }
+
     $error = '';
 
     if (isset($_POST['submit'])) {
