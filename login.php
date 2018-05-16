@@ -42,20 +42,21 @@
 
     <form action="login.php" method="post">
         <div class="form-group">    
-            <label for="username">Username</label>
+            <label for="username" class="col-3">Username</label>
             <div class="col-3">
                 <input type="text" name="username" class="form-control" value="" required>
             </div>
         </div>
         <div class="form-group">
-            <label for="password">Password</label>
+            <label for="password" class="col-3">Password</label>
             <div class="col-3">
                 <input type="password" name="password" class="form-control" value="" required>
             </div>
         </div>
         <div id="error" class="text-danger"><?=$error ?></div>
-        <button type="submit" name="submit" class="btn btn-primary">Submit</button>
-        
+        <div class="col-3">
+            <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+        </div>
     </form>
 
     <?php } ?> 
