@@ -7,11 +7,7 @@
     <link rel="stylesheet" type="text/css" href="view/index-style.css">
     <link rel="stylesheet" href="bt/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<<<<<<< HEAD
     <title>TIT</title>
-=======
-    <title>Jurnal IT</title>
->>>>>>> ed6675d02fac83682fd6e0733e2338475902dadb
     <?php
     require_once 'core/init.php';
 

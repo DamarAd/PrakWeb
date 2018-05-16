@@ -46,18 +46,6 @@
     } 
 ?>
 
-<!-- <form action="" method="post">
-    <label for="judul">Judul</label>
-    <input type="text" name="judul" value="<?=$judul_awal;?>"><br><br>
-
-    <label for="konten">Konten</label>
-    <textarea name="konten" id="" cols="40" rows="10"> <?=$konten_awal;?> </textarea><br><br>
-
-    <div id="error"><?=$error ?></div>
-
-    <input type="submit" value="submit" name="submit">
-</form>  -->
-
     <form action="" method="post">
         <div class="form-group">
             <label for="judul" class="col-3">Judul</label>

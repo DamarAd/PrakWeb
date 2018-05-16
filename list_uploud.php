@@ -19,13 +19,8 @@
             <div id="logo">Jurnal IT</div>
             <div id="nav-menu">
                 <a href="index.php">Beranda</a>
-<<<<<<< HEAD
                 <a href="index.php">Artikel</a>
                 <a href="index.php">Saran</a>
-=======
-                <a href="index.php#artikel">Artikel</a>
-                <a href="index.php#dukungan">Saran</a>
->>>>>>> ed6675d02fac83682fd6e0733e2338475902dadb
                 <a href="list_uploud.php">Ebook Pemrogaman</a>
 
             <?php if($login == true):?>
