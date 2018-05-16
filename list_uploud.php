@@ -18,9 +18,9 @@
         <div class="header">
             <div id="logo">TIT</div>
             <div id="nav-menu">
-                <a href="#beranda">Beranda</a>
-                <a href="#artikel">Artikel</a>
-                <a href="#dukungan">Saran</a>
+                <a href="index.php">Beranda</a>
+                <a href="index.php">Artikel</a>
+                <a href="index.php">Saran</a>
                 <a href="list_uploud.php">Ebook Pemrogaman</a>
 
             <?php if($login == true):?>
