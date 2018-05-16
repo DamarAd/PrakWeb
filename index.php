@@ -6,9 +6,9 @@
     <title>Tokoh IT</title>
     <?php
     require_once 'core/init.php';
-    
+
     $login = false;
-    if($_SESSION['user']){
+    if(isset($_SESSION['user'])){
         $login = true;
     }    
 
@@ -24,6 +24,7 @@
                 <a href="#beranda">Beranda</a>
                 <a href="#artikel">Artikel</a>
                 <a href="#dukungan">Saran</a>
+                <a href="#dukungan">Ebook Pemrogaman</a>
 
             <?php if($login == true):?>
                 <a href="logout.php">Logout</a>

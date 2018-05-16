@@ -1,6 +1,10 @@
 <?php
     require_once 'core/init.php';
     
+    if(isset($_SESSION['user'])){
+        header('Location:index.php');
+    } else {
+    
     $error = '';
 
     if (isset($_POST['submit'])) {
@@ -21,10 +25,6 @@
         }
         
     }
-    
-    if($_SESSION['user']){
-        header('Location:index.php');
-    } else {
        
 ?>
 
