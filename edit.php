@@ -46,7 +46,7 @@
     } 
 ?>
 
-<form action="" method="post">
+<!-- <form action="" method="post">
     <label for="judul">Judul</label>
     <input type="text" name="judul" value="<?=$judul_awal;?>"><br><br>
 
@@ -56,9 +56,9 @@
     <div id="error"><?=$error ?></div>
 
     <input type="submit" value="submit" name="submit">
-</form> 
+</form>  -->
 
-    <!-- <form action="edit.php" method="post">
+    <form action="" method="post">
         <div class="form-group">
             <label for="judul" class="col-3">Judul</label>
             <div class="col-3">
@@ -73,9 +73,9 @@
         </div>
             <div id="error"><?=$error ?></div>
         <div class="col-3">
-            <button type="submit" name="submit" class="btn btn-primary">Perbarui</button>
+            <button type="submit" value="submit" name="submit" class="btn btn-primary">Perbarui</button>
         </div>
-    </form>  -->
+    </form> 
     <script href="bt/js/bootstrap.min.js"></script>
     </body>
 </html>
