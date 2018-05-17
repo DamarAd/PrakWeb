@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="bt/css/bootstrap.min.css">
         <link rel="stylesheet" href="view/single-style.css">
     </head>
-    <body>
+    <body id="body">
 
     <?php
         require_once 'core/init.php';
@@ -25,13 +25,13 @@
         }
     ?>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
+    <nav class="navbar navbar-expand-lg list-unstyled navbar-default bg-light justify-content-center">
         <div class="nav justify-content-center">
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="#">Beranda <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">Artikel</a>
+                <a class="nav-item nav-link" href="index.php">Beranda <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="index.php#artikel">Artikel</a>
                 <a class="nav-item nav-link" href="#">Saran</a>
-                <a class="nav-item nav-link" href="#">Ebook Pemrograman</a>
+                <a class="nav-item nav-link" href="list_uploud.php">Ebook Pemrograman</a>
             </div>
         </div>
     </nav>
